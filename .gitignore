@@ -5,3 +5,5 @@ pip/
 .venv/
 __pycache__/
 *.log
+
+**/%localappdata%/
