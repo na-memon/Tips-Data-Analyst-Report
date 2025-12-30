@@ -60,3 +60,4 @@ if you want to create a plot and whenever you do that, please interpret the resu
 
 Lets see whats you have got, i am ready to looking forward to your code without bugs and best possible plots.`
 
+# Tips-Data-Analyst-Report
