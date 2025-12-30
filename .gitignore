@@ -1,8 +1,7 @@
 # ignore .venv directories
 
-.venv/
-
 %localappdata%/
 pip/
 .venv/
 __pycache__/
+*.log
