@@ -1,63 +1,106 @@
-# Tips for Data Analyst Report
+# Tips-Data-Analyst-Report
 
-This repository contains a collection of tips and best practices for creating effective data analyst reports. Whether you are a beginner or an experienced analyst, these tips will help you communicate your findings clearly and effectively.
+Practical tips, workflows, and a starter notebook for creating clear, reproducible data analyst reports. Focus areas: data cleaning, composition, distribution, comparison, relationships, and interpretive plotting for report-ready outputs.
 
-## 1. Installation by create a python virtual environment
-To sepup a python virtual environment for working with data analyst reports, follow these steps:
+## What this repo includes
+- `scripts/01_data_analysis.ipynb` — starter notebook for end-to-end analysis
+- `data/` — sample CSVs (add your own or mock data)
+- `reports/` — saved charts and summary outputs
+- `requirements.txt` — pinned dependencies for reproducibility
 
+## Quick start
+
+**1. Create and activate a virtual environment**
 ```bash
-# create a new virtual environment
 python -m venv .venv
-# Activate the virtual environment in windows using gitbash
+# Windows (Git Bash)
 source .venv/Scripts/activate
+# macOS/Linux
+source .venv/bin/activate
 ```
-
-# create a requirments.txt file and add libraries inside it
-
-# Install required packages
-pip install -r requirments.txt
-or you can install the packages individually using pip:
-
+2. Install dependencies
 ```bash
-pip install pandas numpy matplotlib seaborn plotly
-pip install ipykernel openpyxl
+pip install -r requirements.txt
+# If needed, install individually:
+pip install pandas numpy matplotlib seaborn plotly ipykernel openpyxl statsmodels scipy
 ```
-
-## 2. Create a Jupyter Notebook
-
+3. Lauch Jupyter
 ```bash
-# Create a ipynb file
-mkdir scripts
-cd scripts
-touch 01_data_analysis.ipynb
+python -m ipykernel install --user --name tips-report
+jupyter notebook
 ```
-# If the commands above not work, your Git Bash "forgot" where its tools are. You can temporarily reset the path in your current terminal session by running:
+4. Open the notebook
+    Navigate to scripts/01_data_analysis.ipynb
+    Run cells top-to-bottom
 
+Notebook outline (recommended)
+A. Setup & data load
+    Import libraries
+    Load dataset from data/ (CSV/Excel)
+    Preview: df.head(), df.info(), df.describe()
+
+B. Data cleaning
+
+    Handle missing values, types, duplicates
+    Document decisions (why drop/impute)
+
+C. Composition report
+
+    Column types, unique counts, categorical summaries
+    Table of key fields and roles (ID, target, features)
+
+D. Distribution report
+
+    Histograms, KDEs, boxplots for numeric columns
+    Comment on skew, outliers, ranges
+
+E. Comparison report
+
+    Grouped means/medians by category
+    Bar charts with error bars where relevant
+
+F. Relationship report
+
+    Correlation heatmap
+    Pairplots/scatterplots with trendlines
+    Brief interpretation per chart
+
+G. Statistical checks (optional)
+
+    Simple tests (e.g., t-test, chi-square) via scipy/statsmodels
+    State assumptions and limitations
+
+H. Save outputs
+
+    Export key charts to reports/
+    Save cleaned dataset if needed
+
+## Example prompts (GitHub Copilot or LLMs)
+
+Prompt 1 — analysis scaffold
+Act as a data analyst. Using pandas, numpy, seaborn, matplotlib, and plotly:
+1) Produce a composition report (types, missingness, unique counts).
+2) Distribution report (histograms/boxplots with commentary).
+3) Comparison report (grouped summaries and bar charts).
+4) Relationship report (correlation heatmap, scatterplots with trendlines).
+Include brief interpretations under each chart. If needed, install statsmodels and scipy.
+
+Prompt 2 — plotting with interpretation
+Create plots for numeric columns showing distributions and annotate key insights (skew, outliers, ranges). Save figures to the reports/ folder with clear filenames.
+
+## Tips & troubleshooting
+
+PATH reset (Git Bash)
 ```bash
 export PATH=/usr/bin:/bin:$PATH
-
-After running that, try your original commands again:
-
-mkdir scripts
-cd scripts
-touch 01_data_analysis.ipynb
 ```
-## 2.1. Use of github copilot for data analytics reports
+## Reproducibility
 
-Here is the prompt no. 1:
+    Keep requirements.txt updated
+    Use a named kernel (tips-report)
+    Save figures and cleaned data to versioned folders
 
-> 1. `I have df in this notebook, which has tips data
-Act as a data analyst, and write a code using python libraries pandas, numpy, seaborn, matplotlib, and plotly, to do the basic analytics tasks such as:
 
-1. data composition report
-2. data distribution report
-3. data comparison report
-4. data relationship report
-
-if you need to do the statistics please install stats models and scipy libraries using code cells in jupyter notebook.
-
-if you want to create a plot and whenever you do that, please interpret the results as i would like to submit that in a report form.
-
-Lets see whats you have got, i am ready to looking forward to your code without bugs and best possible plots.`
-
-# Tips-Data-Analyst-Report
+# Author
+Dr. Najeeb Akhter — Teaching Associate, University of Karachi
+Focus: Data Analysis, Monitoring & Evaluation, Sustainability
