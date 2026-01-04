@@ -62,18 +62,18 @@ D. Distribution report
     Histograms, KDEs/boxplots/probplots for numeric columns
     Comment on skew, outliers, ranges
 
-![Distribution of Numerical Variables](image.png)
-![Q-Q Plots: Normality Assessment](image-1.png)
+![Distribution of Numerical Variables](images/distribution.png)
+![Q-Q Plots: Normality Assessment](images/qqplot.png)
 
 E. Comparison report
 
     Grouped means/medians by category
     Boxplots, violin plots and heatmap where relevant
 
-![Impact of Dining Time on Spending & Tipping](image-2.png)
-![Correlation Matrix of Numerical Variables](image-3.png)
-![Boxplot Comparison: Total Bill & Tip Across Categories](image-4.png)
-![Violin Plots: Distribution of Total Bill Across Categories](image-5.png)
+![Impact of Dining Time on Spending & Tipping](images/dining_time.png)
+![Correlation Matrix of Numerical Variables](images/correlation.png)
+![Boxplot Comparison: Total Bill & Tip Across Categories](images/boxplot.png)
+![Violin Plots: Distribution of Total Bill Across Categories](images/violinplot.png)
 
 F. Relationship report
 
@@ -81,15 +81,15 @@ F. Relationship report
     Pairplots/scatterplots with trendlines
     Brief interpretation per chart
 
-![Correlation Heatmap: Numerical Variables](image-6.png)
-![Scatter Plots: Key Relationships with Regression Lines](image-7.png)
+![Correlation Heatmap: Numerical Variables](images/heatmap.png)
+![Scatter Plots: Key Relationships with Regression Lines](images/scatter_key_relationships.png)
 
 G. Statistical checks (optional)
 
     Simple tests (e.g., t-test, chi-square) via scipy/statsmodels
     State assumptions and limitations
 
-![Tip Percentage Analysis](image-8.png)
+![Tip Percentage Analysis](images/tip_percentage.png)
 
 H. Save outputs
 
