@@ -1,8 +1,13 @@
 # Tips-Data-Analyst-Report
 
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
+
 Practical tips, workflows, and a starter notebook for creating clear, reproducible data analyst reports. Focus areas: data cleaning, composition, distribution, comparison, relationships, and interpretive plotting for report-ready outputs.
 
 ## What this repo includes
+
 - `scripts/01_data_analysis.ipynb` — starter notebook for end-to-end analysis
 - `data/` — sample CSVs (add your own or mock data)
 - `reports/` — saved charts and summary outputs
@@ -10,7 +15,7 @@ Practical tips, workflows, and a starter notebook for creating clear, reproducib
 
 ## Quick start
 
-**1. Create and activate a virtual environment**
+### 1. Create and activate a virtual environment
 ```bash
 python -m venv .venv
 # Windows (Git Bash)
@@ -18,22 +23,25 @@ source .venv/Scripts/activate
 # macOS/Linux
 source .venv/bin/activate
 ```
-2. Install dependencies
+
+### 2. Install dependencies
 ```bash
 pip install -r requirements.txt
 # If needed, install individually:
 pip install pandas numpy matplotlib seaborn plotly ipykernel openpyxl statsmodels scipy
 ```
-3. Lauch Jupyter
+
+### 3. Launch Jupyter
 ```bash
 python -m ipykernel install --user --name tips-report
 jupyter notebook
 ```
-4. Open the notebook
+
+### 4. Open the notebook
     Navigate to scripts/01_data_analysis.ipynb
     Run cells top-to-bottom
 
-Notebook outline (recommended)
+## Notebook outline (recommended)
 A. Setup & data load
     Import libraries
     Load dataset from data/ (CSV/Excel)
@@ -51,13 +59,21 @@ C. Composition report
 
 D. Distribution report
 
-    Histograms, KDEs, boxplots for numeric columns
+    Histograms, KDEs/boxplots/probplots for numeric columns
     Comment on skew, outliers, ranges
+
+![Distribution of Numerical Variables](image.png)
+![Q-Q Plots: Normality Assessment](image-1.png)
 
 E. Comparison report
 
     Grouped means/medians by category
-    Bar charts with error bars where relevant
+    Boxplots, violin plots and heatmap where relevant
+
+![Impact of Dining Time on Spending & Tipping](image-2.png)
+![Correlation Matrix of Numerical Variables](image-3.png)
+![Boxplot Comparison: Total Bill & Tip Across Categories](image-4.png)
+![Violin Plots: Distribution of Total Bill Across Categories](image-5.png)
 
 F. Relationship report
 
@@ -65,10 +81,15 @@ F. Relationship report
     Pairplots/scatterplots with trendlines
     Brief interpretation per chart
 
+![Correlation Heatmap: Numerical Variables](image-6.png)
+![Scatter Plots: Key Relationships with Regression Lines](image-7.png)
+
 G. Statistical checks (optional)
 
     Simple tests (e.g., t-test, chi-square) via scipy/statsmodels
     State assumptions and limitations
+
+![Tip Percentage Analysis](image-8.png)
 
 H. Save outputs
 
@@ -77,7 +98,7 @@ H. Save outputs
 
 ## Example prompts (GitHub Copilot or LLMs)
 
-Prompt 1 — analysis scaffold
+    Prompt 1 — analysis scaffold
 Act as a data analyst. Using pandas, numpy, seaborn, matplotlib, and plotly:
 1) Produce a composition report (types, missingness, unique counts).
 2) Distribution report (histograms/boxplots with commentary).
@@ -85,7 +106,7 @@ Act as a data analyst. Using pandas, numpy, seaborn, matplotlib, and plotly:
 4) Relationship report (correlation heatmap, scatterplots with trendlines).
 Include brief interpretations under each chart. If needed, install statsmodels and scipy.
 
-Prompt 2 — plotting with interpretation
+    Prompt 2 — plotting with interpretation
 Create plots for numeric columns showing distributions and annotate key insights (skew, outliers, ranges). Save figures to the reports/ folder with clear filenames.
 
 ## Tips & troubleshooting
@@ -104,3 +125,4 @@ export PATH=/usr/bin:/bin:$PATH
 # Author
 Dr. Najeeb Akhter — Teaching Associate, University of Karachi
 Focus: Data Analysis, Monitoring & Evaluation, Sustainability
+Links: GitHub • ORCID • Google Scholar • LinkedIn
